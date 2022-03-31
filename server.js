@@ -22,7 +22,7 @@ const guardarProd = new Productos();
 app.get('/products', (req,res)=> {
     const productos = guardarProd.traerProductos()
     res.json(productos)
-   // console.log(productos)
+   //console.log(productos)
 })
 app.get('/products/:id', (req,res)=>{
     const id = parseInt(req.params.id)
