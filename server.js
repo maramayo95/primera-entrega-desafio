@@ -19,12 +19,12 @@ const guardarProd = new Productos();
 //     res.sendFile(__dirname + '/views/carrito.html')
 // })
 
-app.get('/products', (req,res)=> {
+app.get('/api/productos', (req,res)=> {
     const productos = guardarProd.traerProductos()
-    res.json(productos)
-   //console.log(productos)
+    console.log(productos)
+        
 })
-app.get('/products/:id', (req,res)=>{
+app.get('/api/productos/:id', (req,res)=>{
     const id = parseInt(req.params.id)
     res.json(guardarProd.traerProducto(id))
 })

@@ -1,29 +1,37 @@
 const fs = require("fs");
-const fs2 = require('fs').promises
-let timestamp = Date.now();
+//const fs2 = require('fs').promises
+//let timestamp = Date.now();
 
 class Productos {
   constuctor() {
     this.productos = [
       {
         id : 1 ,
-        name: tulio,
-        subname: braulio
+        name: 'tulio',
+        subname: 'braulio'
       },
       {
-        id : 2 ,
-        name: tulio,
-        subname: braulio
+        id : 2,
+        name: 'tulio',
+        subname: 'braulio'
       },
       {
-        id : 3 ,
-        name: tulio,
-        subname: braulio
+        id : 2,
+        name: 'tulio',
+        subname: 'braulio'
       }
+     
     ];
     this.idSecuenciado = 0;
   }
 
+  
+   traerProductos() {
+     const productos = this.productos;
+      console.log(productos)
+      //anda la concha de tu madre
+    return productos;
+  }
   
 //   async incorporarProducto() {
 //     const productos = this.productos;
@@ -98,12 +106,7 @@ class Productos {
   //   return buscar;
   // }
 
-  traerProductos() {
-    const productos = this.productos;
-      console.log(productos)
-    return productos;
-  }
-  
+   
 }
 
 
